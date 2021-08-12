@@ -1,0 +1,609 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: sans-serif;
+  overflow-x: hidden;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 3;
+  background-color: rgba(20, 20, 20, 0.973);
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  list-style: none;
+}
+
+nav ul li a {
+  color: white;
+  font-size: larger;
+  margin: 1rem 2rem;
+  text-decoration: none;
+}
+
+ul li a:hover {
+  color: rgba(127, 127, 250, 0.918);
+}
+
+.search {
+  width: 100%;
+  position: relative;
+  display: flex;
+}
+
+.searchTerm {
+  width: 100%;
+  border: 3px solid white;
+  border-right: none;
+  padding: 5px;
+  height: auto;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #333;
+}
+
+.searchTerm:focus {
+  color: #333;
+}
+
+.searchButton {
+  width: 40px;
+  height: 36px;
+  border: 1px solid rgb(238, 238, 238);
+  background: rgb(0, 0, 0);
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/*Resize the wrap to see the search bar change!*/
+.wrap {
+  display: flex;
+  flex-direction: row;
+  width: 30%;
+  margin: 1rem 1rem;
+}
+
+/* Styling First Section */
+
+.first-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 4.2rem;
+  margin-bottom: 0.5rem;
+  background: 
+  /* top, transparent red, faked with gradient */ linear-gradient(
+      rgba(8, 8, 8, 0.45),
+      rgba(8, 8, 8, 0.45)
+    ),
+    url("./Resources/coop-ps5-games-hero-page-banner-featured-03-en-29jan21.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.first-section h1 {
+  margin: 4rem 0;
+  font-size: 5rem;
+  color: rgb(240, 240, 240);
+  text-align: center;
+}
+
+.first-section p {
+  font-size: large;
+  color: #fff;
+  text-align: center;
+}
+
+.first-section button {
+  width: 20%;
+  height: auto;
+  border: 2px solid white;
+  margin: 5rem 0;
+  color: white;
+  padding: 0.5rem 0.5rem;
+  background: transparent;
+  border-radius: 5px;
+  font-size: x-large;
+  cursor: pointer;
+}
+
+.first-section button:hover {
+  background-color: white;
+  color: black;
+  transition: 1s;
+}
+
+.second-section,
+.fifth-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.second-section h2,
+.fifth-section h1 {
+  font-size: xx-large;
+  margin: 1rem 0;
+}
+
+.tiles {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+}
+
+.COD {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: 
+  /* top, transparent red, faked with gradient */ linear-gradient(
+      rgba(8, 8, 8, 0.45),
+      rgba(8, 8, 8, 0.45)
+    ),
+    url("./Resources/wallpapersden.com_poster-of-call-of-duty-black-ops-cold-war_1920x1080.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 22.5%;
+  border-radius: 5px;
+}
+
+.RDR {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: 
+  /* top, transparent red, faked with gradient */ linear-gradient(
+      rgba(8, 8, 8, 0.45),
+      rgba(8, 8, 8, 0.45)
+    ),
+    url("./Resources/Red-Dead-Redemption-2-wallpapers-4k-full-hd-lead_4d470f76dc99e18ad75087b1b8410ea9.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 22.5%;
+  border-radius: 5px;
+}
+
+.ASC {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: 
+  /* top, transparent red, faked with gradient */ linear-gradient(
+      rgba(8, 8, 8, 0.45),
+      rgba(8, 8, 8, 0.45)
+    ),
+    url("./Resources/AC-Valhalla-wrath-of-the-druids-1024x576.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 22.5%;
+  border-radius: 5px;
+}
+
+.NFS {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: 
+  /* top, transparent red, faked with gradient */ linear-gradient(
+      rgba(8, 8, 8, 0.45),
+      rgba(8, 8, 8, 0.45)
+    ),
+    url("./Resources/poster.jpg.adapt.crop16x9.431p.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 22.5%;
+  border-radius: 5px;
+}
+
+.COD h1,
+.RDR h1,
+.ASC h1,
+.NFS h1 {
+  font-size: x-large;
+  margin: 1rem 0.5rem;
+  color: white;
+}
+
+.COD p,
+.RDR p,
+.ASC p,
+.NFS p {
+  font-size: medium;
+  margin: 1rem 0.5rem;
+  line-height: 1.5rem;
+  color: white;
+}
+
+.COD button,
+.RDR button,
+.ASC button,
+.NFS button {
+  width: 40%;
+  height: auto;
+  border: 2px solid white;
+  margin: 2.5rem 0;
+  color: white;
+  padding: 0.25rem 0.25rem;
+  background: transparent;
+  border-radius: 5px;
+  font-size: medium;
+  cursor: pointer;
+}
+
+.COD button:hover,
+.RDR button:hover,
+.ASC button:hover,
+.NFS button:hover {
+  background-color: white;
+  color: black;
+  transition: 1s;
+}
+
+.third-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem 0;
+}
+
+.third-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 2rem 2rem;
+}
+
+.third-image {
+  display: flex;
+  margin: 2rem 2rem;
+}
+
+.third-image img {
+  width: 100%;
+  height: auto;
+}
+
+.third-text h1 {
+  font-size: xx-large;
+  color: black;
+  text-align: left;
+}
+
+.third-text p {
+  font-size: medium;
+  text-align: left;
+  line-height: 2rem;
+  color: black;
+}
+
+.our-team {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  max-width: 100%;
+  margin-bottom: 2rem;
+}
+
+.team-tile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 22.25%;
+  background-color: #e7e7e7a8;
+  border-radius: 10px;
+}
+
+.our-team-description h3 {
+  font-size: x-large;
+  margin: 0.5rem 0;
+  color: #25262c;
+}
+.our-team-description {
+  font-size: larger;
+  margin: 1rem 0;
+  color: #959eaf;
+}
+
+.our-team-image {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+.our-team-image img {
+  max-width: 90%;
+  height: auto;
+  border-radius: 10px;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+.our-team-socials ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+}
+
+.our-team-socials ul li {
+  font-size: xx-large;
+  margin: 0 1rem;
+}
+
+.fas,
+.fab {
+  color: #25262c;
+  margin-bottom: 1rem;
+  transition: 0.7s;
+  -webkit-transition: 0.7s;
+  -moz-transition: 0.7s;
+  -ms-transition: 0.7s;
+  -o-transition: 0.7s;
+}
+
+.fas:hover,
+.fab:hover {
+  transition: 0.7s;
+  -webkit-transition: 0.7s;
+  -moz-transition: 0.7s;
+  -ms-transition: 0.7s;
+  -o-transition: 0.7s;
+  -webkit-transform: rotate(15deg);
+  -moz-transform: rotate(15deg);
+  -o-transform: rotate(15deg);
+  -ms-transform: rotate(15deg);
+  transform: rotate(15deg);
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #333;
+  color: #dbdbdb;
+}
+
+footer p {
+  padding: 1rem 1rem;
+}
+
+.topnav {
+  display: none;
+}
+
+/* Style the navigation menu */
+.topnav {
+  overflow: hidden;
+  background-color: rgba(119, 119, 119, 0.863);
+  position: relative;
+}
+
+/* Hide the links inside the navigation menu (except for logo/home) */
+.topnav #myLinks {
+  display: none;
+}
+
+/* Style navigation menu links */
+.topnav a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+/* Style the hamburger menu */
+.topnav a.icon {
+  background: black;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+/* Add a grey background color on mouse-over */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Style the active link (or home/logo) */
+.active {
+  background-color: rgba(20, 20, 20, 0.973);
+  color: white;
+}
+
+@media only screen and (max-width: 1040px) {
+  .nav-one {
+    display: none;
+  }
+
+  .topnav {
+    display: block;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 3;
+    background-color: rgba(20, 20, 20, 0.973);
+  }
+
+  nav ul {
+    margin-top: 1rem;
+  }
+
+  nav ul li a {
+    color: white;
+    font-size: larger;
+    margin: 0.5rem 0.5rem;
+    text-decoration: none;
+  }
+
+  .search {
+    width: 100%;
+    position: relative;
+    display: flex;
+  }
+
+  input ::placeholder {
+    display: none;
+  }
+
+  .first-section {
+    margin-top: 0;
+  }
+
+  .first-section h1 {
+    margin: 2rem 0;
+    font-size: 2rem;
+  }
+
+  .first-section p {
+    font-size: large;
+    color: #fff;
+    text-align: center;
+  }
+
+  .first-section button {
+    width: 50%;
+    height: auto;
+    border: 2px solid white;
+    margin: 5rem 0;
+    color: white;
+    padding: 0.5rem 0.5rem;
+    background: transparent;
+    border-radius: 5px;
+    font-size: medium;
+    cursor: pointer;
+  }
+
+  .first-section button:hover {
+    background-color: white;
+    color: black;
+    transition: 1s;
+  }
+
+  .tiles {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .COD,
+  .RDR,
+  .ASC,
+  .NFS {
+    display: flex;
+    width: 90%;
+    margin: 0.5rem 0;
+  }
+
+  .third-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0;
+  }
+
+  .third-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 2rem 2rem;
+  }
+
+  .third-image {
+    display: flex;
+    margin: 1rem 1rem;
+  }
+
+  .third-image img {
+    width: 100%;
+    height: auto;
+  }
+
+  .third-text h1 {
+    font-size: xx-large;
+    color: black;
+    text-align: left;
+  }
+
+  .third-text p {
+    font-size: medium;
+    text-align: left;
+    line-height: 2rem;
+    color: black;
+  }
+
+  .our-team {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .team-tile {
+    width: 90%;
+    margin: 1rem 0;
+  }
+}
